@@ -84,12 +84,116 @@ header .logo .logo__star {
 
 
 
-/* Main */
+/* Slider */
 
 .slider {
-    height: 600px;
+    height: 594px;
     background-color: #f06c64;
+    display: flex;
+    justify-content: space-between;
 }
+
+.slider__control {
+    width: 100px;
+}
+
+.slider__control a {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.slider__control a img {
+    position: absolute;
+    top: 281px;
+    display: block;
+}
+
+.slider__control .left-arrow {
+    left: 50%;
+}
+
+.slider__control:hover .left-arrow {
+    transform: scale(1.2);
+}
+
+.slider__control:hover .right-arrow {
+    transform: rotate(180deg) scale(1.2);
+}
+
+.slider__control .right-arrow{
+    transform: rotate(180deg);
+    right: 48%;
+}
+
+.slider__content {
+    height: inherit;
+    width: 100%;
+    position: relative;
+}
+
+.iphone-vertical {
+    position: absolute;
+    top: 53px;
+    left: 29px;
+}
+
+.iphone-horizontal {
+    position: absolute;
+    top: 53px;
+    left: 462px;
+}
+
+.iphone-vertical__base, .iphone-horizontal__base {
+    position: absolute;
+    background-image: url(assets/images/iphone_base.png);
+    background-repeat: no-repeat;
+    height: 459px;
+    width: 216px;
+}
+
+.iphone-horizontal__base {
+    transform: rotate(90deg);
+}
+
+.iphone-vertical__shadow, .iphone-horizontal__shadow {
+    position: absolute;
+    background-image: url(assets/images/iphone_shadow.png);
+    width: 240px;
+    height: 483px;
+}
+
+.iphone-horizontal__shadow {
+    transform: rotate(90deg) rotateX(180deg);
+    left: 3px;
+}
+
+.iphone-vertical__screen {
+    position: absolute;
+    background-image: url(assets/images/layer_6.png);
+    background-position: -14px -135px;
+    width: 188px;
+    height: 333px;
+    top: 65px;
+    left: 14px;
+}
+
+.iphone-horizontal__screen {
+    position: absolute;
+    background-image: url(assets/images/layer_5.png);
+    background-position: -125px -119px;
+    width: 333px;
+    height: 188px;
+    top: 135px;
+    left: -60px;
+}
+
+.slider-bottom {
+    height: 6px;
+    background-color: #ea676b;
+}
+
+/* Services */
 
 .services {
     height: 495px;
