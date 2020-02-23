@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+.wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    height: 89px;
+    background-color: #2d303a;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+}
+
+header .logo h1 {
+    font-size: 25px;
+    line-height: 20px;
+    color: #ffffff;
+    font-family: "Lato", monospace;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 35px 0 34px 40px;
+}
+
+header .logo .logo__star {
+    color: #f06c64;
+}
+
+.header-nav {
+    display: flex; 
+    flex-direction: column;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 40px 40px 36px 0;
+    width: 371px;
+}
+
+.header-nav ul .header-nav__divider {
+    color: white;
+    opacity: 0.25;
+    margin-top: 3px;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 9px;
+    color: white;
+    font-family: "Lato";
+    font-weight: 700;
+}
+
+.header-nav ul li a:hover {
+    color: #f06c64;
+}
+
+.header-bottom {
+    height: 6px;
+    background-color: #323746;
+}
+
+
+
+/* Slider */
+
+.slider {
+    height: 594px;
+    background-color: #f06c64;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__control {
+    width: 100px;
+}
+
+.slider__control a {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.slider__control a img {
+    position: absolute;
+    top: 281px;
+    display: block;
+}
+
+.slider__control .left-arrow {
+    left: 50%;
+}
+
+.slider__control:hover .left-arrow {
+    transform: scale(1.2);
+}
+
+.slider__control:hover .right-arrow {
+    transform: rotate(180deg) scale(1.2);
+}
+
+.slider__control .right-arrow{
+    transform: rotate(180deg);
+    right: 48%;
+}
+
+.slider__content {
+    height: inherit;
+    width: 100%;
+    position: relative;
+}
+
+.iphone-vertical {
+    position: absolute;
+    top: 53px;
+    left: 29px;
+}
+
+.iphone-horizontal {
+    position: absolute;
+    top: 53px;
+    left: 462px;
+}
+
+.iphone-vertical__base, .iphone-horizontal__base {
+    position: absolute;
+    background-image: url(assets/images/iphone_base.png);
+    background-repeat: no-repeat;
+    height: 459px;
+    width: 216px;
+}
+
+.iphone-horizontal__base {
+    transform: rotate(90deg);
+}
+
+.iphone-vertical__shadow, .iphone-horizontal__shadow {
+    position: absolute;
+    background-image: url(assets/images/iphone_shadow.png);
+    width: 240px;
+    height: 483px;
+}
+
+.iphone-horizontal__shadow {
+    transform: rotate(90deg) rotateX(180deg);
+    left: 3px;
+}
+
+.iphone-vertical__screen {
+    position: absolute;
+    background-image: url(assets/images/layer_6.png);
+    background-position: -14px -135px;
+    width: 188px;
+    height: 333px;
+    top: 65px;
+    left: 14px;
+}
+
+.iphone-horizontal__screen {
+    position: absolute;
+    background-image: url(assets/images/layer_5.png);
+    background-position: -125px -119px;
+    width: 333px;
+    height: 188px;
+    top: 135px;
+    left: -60px;
+}
+
+.slider-bottom {
+    height: 6px;
+    background-color: #ea676b;
+}
+
+/* Services */
+
+.services {
+    height: 495px;
+    background-color: #f2f2f2;
+}
+
+.services__header{
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+    margin-left: 40px;
+    padding-top: 68px;
+}
+
+.services__description {
+    width: 940px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: left;
+    margin-left: 41px;
+    margin-top: 27px;
+}
+
+.services__content {
+    margin: 46px 41px 0 41px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 36px;
+    grid-column-gap: 19px;
+}
+
+.service-item {
+    width: 300px;
+    height: 87px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 25% 75%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.service-item .item-logo {
+    width: 60px;
+    height: 60px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.service-item .item-logo .logo-picture {
+    fill: #666d89;
+}
+
+.service-item .item-logo .logo-ellipse {
+    fill: none;
+    stroke: #666d89;
+    stroke-width: 2
+}
+
+.service-item .item-header {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+}
+
+.service-item .item-description {
+    width: 220px;
+    height: 62px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+    overflow: hidden;
+}
+
+.services-bottom {
+    height: 6px;
+    background-color: #fff;
+}
