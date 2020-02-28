@@ -1,7 +1,7 @@
 /* Portfolio */
 
 .portfolio {
-    height: 870px;
+    height: 864px;
     background-color: #2d303a;
 }
 
@@ -69,10 +69,17 @@
 .portfolio__content {
     margin-left: 40px;
     margin-top: 19px;
+    height: 605px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 16px;
+    justify-content: start;
+    align-content: start;
     overflow: hidden;
+}
+
+.portfolio-bottom {
+    height: 6px;
+    background-color: #323746;
 }
