@@ -1,18 +1,6 @@
-/* Portfolio */
+/* Main */
 
-.portfolio {
-    height: 864px;
-    background-color: #2d303a;
-}
-
-.about-us {
-    height: 728px;
-    background-color: #f2f2f2;
-}
-
-.portfolio__header {
-    padding-top: 67px;
-    margin-left: 41px;
+.section-header {
     font-size: 30px;
     line-height: 23px;
     color: #666d89;
@@ -21,20 +9,36 @@
     text-align: left;
 }
 
-.portfolio__description {
-    margin-top: 31px;
-    margin-left: 41px;
+.section-description {
+    width: 940px;
     font-size: 18px;
-    line-height: 17px;
+    line-height: 30px;
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
     text-align: left;
 }
 
+/* Portfolio */
+
+.portfolio {
+    height: 864px;
+    background-color: #2d303a;
+}
+
+.portfolio__header {
+    padding-top: 67px;
+    margin-left: 40px;
+}
+
+.portfolio__description {
+    margin-top: 24px;
+    margin-left: 40px;
+}
+
 .portfolio__tags {
     width: 289px;
-    margin-top: 17px;
+    margin-top: 11px;
     margin-left: 41px;
 }
 
@@ -82,4 +86,86 @@
 .portfolio-bottom {
     height: 6px;
     background-color: #323746;
+}
+
+/* About Us */
+
+.about-us {
+    height: 728px;
+    background-color: #f2f2f2;
+}
+
+.about-us__header {
+    padding-top: 66px;
+    margin-left: 40px;
+}
+
+.about-us__description {
+    margin-top: 24px;
+    margin-left: 40px;
+}
+
+.about-us__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-top: 45px;
+    margin-right: 40px;
+    margin: 45px 40px 0 40px;
+}
+
+.employee__photo {
+    position: absolute;
+    clip: rect(0 300px 300px 0);
+    /* width: 301px; */
+    /* height: 301px; */
+}
+
+.employee__name {
+    margin-top: 317px;
+    font-size: 18px;
+    width: 301px;
+    height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+}
+
+.employee__description {
+    width: 301px;
+    height: 36px;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 21px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.employee__social {
+    margin-top: 29px;
+}
+
+.employee__social a {
+    margin-right: 1px;
+}
+
+.employee__social a img {
+    transition: transform 0.5s;
+}
+
+.employee__social a:hover img {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+.about-us-bottom {
+    height: 6px;
+    background-color: #fff;
 }
