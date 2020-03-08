@@ -1,0 +1,50 @@
+/* Quote */
+
+.quote {
+    height: 648px;
+    background-color: #f06c64;
+}
+
+
+
+.quote-bottom {
+    height: 6px;
+    background-color: #ea676b;
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    height: 76px;
+    background-color: #2d303a;
+}
+
+.copyright {
+    position: absolute;
+    left: 42px;
+    top: 40%;
+    font-size: 12px;
+    font-family: "Lato";
+    font-weight: 400;
+    color: #666d89;
+}
+
+.footer-social {
+    position: absolute;
+    right: 37px;
+    top: 28%;
+}
+
+.footer-social a {
+    margin-right: 1px;
+}
+
+.footer-social a img {
+    transition: transform 0.5s;
+}
+
+.footer-social a:hover img {
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
