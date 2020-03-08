@@ -5,6 +5,124 @@
     background-color: #f06c64;
 }
 
+.quote__header {
+    padding-top: 66px;
+    margin-left: 40px;
+    color: #f0d8d9;
+}
+
+.quote__description {
+    margin-top: 24px;
+    margin-left: 40px;
+    color: #f0d8d9;
+}
+
+.quote__content {
+    position: relative;
+    margin: 44px 40px 0 40px;
+}
+
+.quote-form {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.quote-form input:not([type=submit]), .quote-form #form-descr {
+    display: block;
+    width: 619px;
+    border-radius: 5px;
+    border: none;
+    background-color: #d6564f;
+    padding: 0px 15px;
+    font-size: 12px;
+    line-height: 38px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.quote-form input:not([type=submit]) {
+    height: 38px;
+    margin-bottom: 16px;
+}
+
+.quote-form #form-descr {
+    resize: none;
+    height: 202px;
+}
+
+.quote-form input::placeholder, .quote-form #form-descr::placeholder {
+    color: #f48c8f;
+}
+
+.quote-form #submit {
+    display: block;
+    height: 38px;
+    width: 100px;
+    position: absolute;
+    left: 630px;
+    bottom: 0;
+    font-size: 18px;
+    line-height: 35px;
+    color: #d6564f;
+    background-color: transparent;
+    font-family: "Lato";
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid #d6564f;
+}
+
+.quote-form #submit:hover {
+    color: #f0d8d9;
+    border: 1px solid #f0d8d9;
+}
+
+.contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contact__header {
+    font-size: 18px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 900;
+}
+
+.contact__information {
+    width: 300px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.contact__contacts {
+    margin-top: 20px;
+}
+
+.contact__contacts div a {
+    text-decoration: none;
+    margin-left: 8px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 700;
+}
+
+.contact__contacts div:first-child {
+    margin-left: 3px;
+}
+
+
+
 
 
 .quote-bottom {
