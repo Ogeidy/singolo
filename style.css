@@ -555,9 +555,9 @@ header .logo .logo__star {
     margin-top: 20px;
 }
 
-.contact__contacts div a {
+.contact__contacts a {
+    display: block;
     text-decoration: none;
-    margin-left: 8px;
     font-size: 12px;
     line-height: 22px;
     color: #f0d8d9;
@@ -565,7 +565,23 @@ header .logo .logo__star {
     font-weight: 700;
 }
 
-.contact__contacts div:first-child {
+.contact__contacts a:hover {
+    filter: brightness(0.5);
+}
+
+.contact__contacts a:first-child span {
+    margin-left: 11px;
+}
+
+.contact__contacts a:nth-child(2) span {
+    margin-left: 10px;
+}
+
+.contact__contacts a:nth-child(3) span {
+    margin-left: 8px;
+}
+
+.contact__contacts a:first-child {
     margin-left: 3px;
 }
 
