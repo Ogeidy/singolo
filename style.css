@@ -23,7 +23,6 @@ body {
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
-    text-align: left;
 }
 
 .section-description {
@@ -33,7 +32,7 @@ body {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
-    text-align: left;
+    text-align: justify;
 }
 
 
@@ -57,7 +56,6 @@ header .logo h1 {
     color: #ffffff;
     font-family: "Lato", monospace;
     font-weight: 700;
-    text-align: left;
     text-transform: uppercase;
     margin: 35px 0 34px 40px;
 }
@@ -275,7 +273,6 @@ header .logo .logo__star {
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
-    text-align: left;
 }
 
 .service-item .item-description {
@@ -286,7 +283,7 @@ header .logo .logo__star {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
-    text-align: left;
+    text-align: justify;
     overflow: hidden;
 }
 
@@ -336,7 +333,6 @@ header .logo .logo__star {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
-    text-align: left;
     border-radius: 5px;
     border: 1px solid #666d89;
 }
@@ -421,6 +417,7 @@ header .logo .logo__star {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
+    text-align: justify;
 }
 
 .employee__social {
@@ -549,6 +546,7 @@ header .logo .logo__star {
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 400;
+    text-align: justify;
 }
 
 .contact__contacts {
