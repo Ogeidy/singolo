@@ -214,6 +214,11 @@ header .logo .logo__star {
     height: inherit;
 }
 
+.turn-off {
+    opacity: 0;
+}
+
+
 /* Slider-1 */
 
 #slider-1 {
@@ -234,15 +239,17 @@ header .logo .logo__star {
 }
 
 .iphone-vertical__base, .iphone-horizontal__base {
+    display: block;
     position: absolute;
-    background-image: url(assets/images/iphone_base.png);
-    background-repeat: no-repeat;
-    height: 459px;
-    width: 216px;
+    height: 458px;
+    width: 215px;
 }
 
 .iphone-horizontal__base {
     transform: rotate(90deg);
+    left: 2px;
+    width: 214px;
+    height: 457px;
 }
 
 .iphone-vertical__shadow, .iphone-horizontal__shadow {
@@ -265,6 +272,7 @@ header .logo .logo__star {
     height: 333px;
     top: 65px;
     left: 14px;
+    transition: opacity 0.25s;
 }
 
 .iphone-horizontal__screen {
@@ -275,6 +283,7 @@ header .logo .logo__star {
     height: 188px;
     top: 135px;
     left: -60px;
+    transition: opacity 0.25s;
 }
 
 /* Slider-2 */
@@ -312,8 +321,9 @@ header .logo .logo__star {
     background-position: -14px -135px;
     top: 65px;
     left: 14px;
-    width: 188px;
-    height: 333px;
+    width: 189px;
+    height: 334px;
+    transition: opacity 0.25s;
 }
 
 .iphone.front {

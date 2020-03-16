@@ -84,3 +84,10 @@ document.querySelector('.slider__control.right').addEventListener('click', () =>
     }
 });
 
+// Phone buttons
+
+document.querySelectorAll('.iphone-button').forEach(function(el){
+    el.addEventListener('click', (event) => {
+        event.target.parentElement.nextElementSibling.classList.toggle('turn-off');
+    })
+});
