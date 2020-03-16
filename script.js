@@ -5,7 +5,7 @@ let sections = document.querySelectorAll('section');
 let links = document.querySelectorAll('.header-nav__item');
 
 MENU.addEventListener('click', event => {
-    if (event.target in links) {
+    if (Array.from(links).includes(event.target)) {
         links.forEach(el => el.classList.remove('active'));
         event.target.classList.add('active');
     }
@@ -67,7 +67,7 @@ function changeItemsWrapper() {
     sliderItems[activeItem.next(direction)].style.backgroundColor = tmpColor;
     sliderItems[activeItem.next(direction)].style.transition = tmpTransition;
     sliderItems[activeItem.next(direction)].style.borderBottomColor = tmpBottom;
-    window.setTimeout(changeItems, 5);
+    window.setTimeout(changeItems, 20);
 }
 
 document.querySelector('.slider__control.left').addEventListener('click', () => {
@@ -90,4 +90,40 @@ document.querySelectorAll('.iphone-button').forEach(function(el){
     el.addEventListener('click', (event) => {
         event.target.parentElement.nextElementSibling.classList.toggle('turn-off');
     })
+});
+
+// Portfolio tabs & pictures
+
+let tags = document.querySelectorAll('.tag__item');
+let pictures = document.querySelectorAll('.portfolio-item img');
+
+function changePictures(event) {
+    if (event.propertyName === 'opacity') {
+        let firstItem = document.querySelector('.portfolio__content').querySelector('.portfolio-item');
+        document.querySelector('.portfolio__content').appendChild(firstItem);
+        document.querySelector('.portfolio__content').classList.remove('fade');
+        document.querySelector('.portfolio__content').removeEventListener('transitionend', changePictures);
+    } 
+}
+
+document.querySelector('.portfolio__tags').addEventListener('click', event => {
+    if (Array.from(tags).includes(event.target)) {
+        if (!event.target.classList.contains('active')) {
+            tags.forEach(el => el.classList.remove('active'));
+            pictures.forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelector('.portfolio__content').classList.add('fade');
+            document.querySelector('.portfolio__content').addEventListener('transitionend', changePictures);
+        }
+    }
+});
+
+
+document.querySelector('.portfolio__content').addEventListener('click', event => {
+    if (Array.from(pictures).includes(event.target)) {
+        if (!event.target.classList.contains('active')) {
+            pictures.forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    }
 });
