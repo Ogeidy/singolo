@@ -6,10 +6,12 @@ let links = document.querySelectorAll('.header-nav__item');
 
 MENU.addEventListener('click', event => {
     if (Array.from(links).includes(event.target)) {
-        links.forEach(el => el.classList.remove('active'));
-        event.target.classList.add('active');
-        let el_index = Array.from(links).indexOf(event.target);
-        sections[el_index].scrollIntoView({block: "start", behavior: "smooth"});
+        if (!event.target.classList.contains('active')) {
+            links.forEach(el => el.classList.remove('active'));
+            event.target.classList.add('active');
+            let el_index = Array.from(links).indexOf(event.target);
+            sections[el_index].scrollIntoView({block: "start", behavior: "smooth"});
+        }
     }
 });
 
@@ -120,7 +122,6 @@ document.querySelector('.portfolio__tags').addEventListener('click', event => {
     }
 });
 
-
 document.querySelector('.portfolio__content').addEventListener('click', event => {
     if (Array.from(pictures).includes(event.target)) {
         if (!event.target.classList.contains('active')) {
@@ -128,4 +129,26 @@ document.querySelector('.portfolio__content').addEventListener('click', event =>
             event.target.classList.add('active');
         }
     }
+});
+
+// Get a quote
+
+const FORM = document.querySelector('.quote-form');
+const OK_BUTTON = document.getElementById('ok-btn');
+
+FORM.addEventListener('submit', (event) => {
+    event.preventDefault();
+    document.getElementById('message-block').classList.remove('hidden');
+
+    let subject = document.getElementById('form-subject').value.toString();
+    let descr = document.getElementById('form-descr').value.toString();
+    document.getElementById('msg-subject').innerHTML  = subject ? '<span>Subject:</span> ' +
+                                                        subject : '<span>No subject</span>';
+    document.getElementById('msg-descr').innerHTML = descr ? '<span>Description:</span> ' +
+                                                     descr : '<span>No description</span>'; 
+});
+
+OK_BUTTON.addEventListener('click', () => {
+    document.getElementById('message-block').classList.add('hidden');
+    FORM.reset();
 });
