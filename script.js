@@ -8,6 +8,8 @@ MENU.addEventListener('click', event => {
     if (Array.from(links).includes(event.target)) {
         links.forEach(el => el.classList.remove('active'));
         event.target.classList.add('active');
+        let el_index = Array.from(links).indexOf(event.target);
+        sections[el_index].scrollIntoView({block: "start", behavior: "smooth"});
     }
 });
 
