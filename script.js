@@ -72,14 +72,14 @@ function changeItemsWrapper() {
 
 document.querySelector('.slider__control.left').addEventListener('click', () => {
     if (isEnable) {
-        direction = 'to_left';
+        direction = 'to_right';
         changeItemsWrapper();
     }
 });
 
 document.querySelector('.slider__control.right').addEventListener('click', () => {
     if (isEnable) {
-        direction = 'to_right';
+        direction = 'to_left';
         changeItemsWrapper();
     }
 });
